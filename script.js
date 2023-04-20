@@ -24,45 +24,48 @@ let passed = false;
 // **sua lógica a partir daqui**
 
 
-if(gender === "male"){  //VERIFICA O GENERO 
-    if(height >= 1.70){ //VERIFICA A ALTURA 
+if(gender === "male"){  //verifica se o genero é masculino
+    if(height >= 1.70){ //Verifica se a altura minima é 1.70 
     
-        if(barReps >= 6 || barSeconds >= 15){  //VERIFICA REPETIÇÃO NA BARRA
+        if(barReps >= 6 || barSeconds >= 15){  //Verifica a repetição em barra e segundos
 
-            if(abs >= 41){  //VERIFICA ABDOMINAIS
+            if(abs >= 41){  //Verifica pelo menos 41 abdominais ou mais
 
-                if(runDistance >= 3000 && runTime <= 720 ||  //VERIFICA DISTANCIA CORRIDA
-                    runDistance >= 5000 && runTime <= 1200){
+                if(runDistance >= 3000 && runTime <= 720 ||  
+                    runDistance >= 5000 && runTime <= 1200)
+                    { // Verifica distancia percorrida e segundos
 
-                    if(swimDistance >= 100 && swimTime <= 60 || diveTime <= 30){ //VERIFICA O NADO 
-                        passed = true;  
+                    if(swimDistance >= 100 && swimTime <= 60 || diveTime <= 30){ //Verifica o nado e o segundos
+                        passed = true;  // se foi aprovado em todos os requisitos vai ser true
                     }
                 }
             }
         }
     }
 }
-    else if (gender === "female"){ // VERIFICA O GENERO 
-        if(height >= 1.60){ //VERIFICA A ALTURA
+else if (gender === "female"){ // Verifica se o Genero é feminino
+    if(height >= 1.60){ // Verifica se a altura é igual ou maior 1.60
 
-            if(barReps >= 5 || barSeconds >= 12){ // VERIFICA BARRA
+        if(barReps >= 5 || barSeconds >= 12){ // Verifica a repetição em barra e segundos
 
-                if(abs >= 41){ //VERIFICA ABDOMINAIS
 
-                    if(runDistance >= 4000 && runTime <= 900 || 
-                    runDistance >= 6000 && runTime <= 1320){ //VERIFICA CORRIDA 
+            if(abs >= 41){ // Verifica pelo menos 41 abdominais ou mais 
 
-                        if(swimDistance >= 100 && swimTime <= 60 || 
-                        diveTime <= 30){ //VERIFICA NATAÇÃO
-                        passed = true;
-                        }
-                    } 
-                }
+                if(runDistance >= 4000 && runTime <= 900 || 
+                runDistance >= 6000 && runTime <= 1320){ // Verifica distancia percorrida e segundos
+
+                    if(swimDistance >= 100 && swimTime <= 60 || 
+                    diveTime <= 30){ // Verifica distancia da natação tempo e mergulho
+                    passed = true;
+                    }
+                } 
             }
         }
-    }else{
-    passed = false; //
     }
+}else{
+passed = false; // se foi aprovado em todos os requisitos vai ser false
+}
+
 
 
 
