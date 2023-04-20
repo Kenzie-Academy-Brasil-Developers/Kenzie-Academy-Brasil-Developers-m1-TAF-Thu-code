@@ -1,5 +1,5 @@
 // Variáveis para aplicar os resultados do teste. Você deverá categoriza-las como let/const, mas não deve alterar os valores.
-let gender = process.argv[2]; // Genero 
+const gender = process.argv[2]; // Genero 
 const height = process.argv[3]; // Altura
 const barReps = process.argv[4]; // Repetições com barra
 const barSeconds = process.argv[5]; // Tempo das repetições com barra 
@@ -10,7 +10,7 @@ const swimDistance = process.argv[9]; // Distância da natação
 const swimTime = process.argv[10]; // Tempo da natação
 const diveTime = process.argv[11]; // Tempo de mergulho
 
-passed = false;
+let passed = false;
 
 /*
     Importante:
